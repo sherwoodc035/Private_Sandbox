@@ -126,7 +126,7 @@ public class SinglyLinkedList {
 			System.out.println("List is empty.");
 			return;
 		}
-		while (start != tail)
+		while (head != tail)
 		{
 			System.out.println("List only has one node.");
 			return;
