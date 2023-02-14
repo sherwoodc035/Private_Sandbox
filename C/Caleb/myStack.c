@@ -74,9 +74,23 @@ studentStruct* readfile(FILE* file) {
 			headerline = false;
 		else {
 			/* create a new structure to hold student data */
-			
+			studentStruct* newSt = (studentStruct*)malloc(sizeof(studentStruct));
+			/* read the data from buffer into struct using sscanf */
+			sscanf(
+				buffer,
+				"%s,%s,%d,%d,%d,%d", 
+				newSt->firstName,
+				newSt->lastName, 
+				newSt->scores[0],
+				newSt->scores[1],
+				newSt->scores[2],
+				newSt->scores[3]
+			);
+			/* reads until fgets() returns a NULL pointer */
 		}
 	}
+
+	return newSt;
 } /* end readfile() */
 
 int main()
